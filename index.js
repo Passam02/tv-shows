@@ -16,9 +16,7 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.get('/r/:tvshow', (req, res) => {
-    const { tvshow } = req.params
-    console.log(tvshow)
-    console.dir(tvshow)
-    res.render('tvshows', {tvshow})
+app.get('/r/:tvshow/:id', (req, res) => {
+    const { tvshow, id } = req.params
+    res.render('tvshows', {tvshow, id})
 })
