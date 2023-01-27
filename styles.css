@@ -28,13 +28,24 @@ input {
 .shows{
     display: inline-block;
     text-align: center;
+    align-items: center;
     margin: 0 1rem;
     margin-bottom: 1rem;
     -webkit-box-shadow: 0px 0px 14px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 0px 14px 0px rgba(66, 68, 90, 1);
     box-shadow: 0px 0px 14px 0px rgba(66, 68, 90, 1);
+    overflow-wrap: normal;
+    max-width: 210px;
 }
-
 .showsPlace {
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1210px;
+    
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }
