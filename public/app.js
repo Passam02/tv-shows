@@ -28,7 +28,7 @@ const makeImages = (tvShows) => {
             div.append(img)
             div.append(name)
             link.append(div)
-            link.href = `/r/${show.show.name}/${show.show.id}`
+            link.href = `/r/${show.show.name}/id=${show.show.id}`
             div.classList.add('shows')
         }
     }

@@ -5,8 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= tvshow %></title>
+    <link rel="stylesheet" href="/shows.css">
 </head>
 <body>
-    
+    <div class="main">
+        <div class="image"></div>
+        <div class="info"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const ids = <%= id %>
+        console.log(ids)
+    </script>
+    <script src="/shows.js"></script>
 </body>
 </html>
