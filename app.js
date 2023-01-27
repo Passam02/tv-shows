@@ -18,9 +18,10 @@ const makeImages = (tvShows) => {
             const div = document.createElement('DIV')
             const img = document.createElement('IMG')
             const name = document.createElement('h4')
+            const container = document.querySelector('.showsPlace')
             name.innerText = show.show.name
             img.src = show.show.image.medium
-            document.body.append(div)
+            container.append(div)
             div.append(img)
             div.append(name)
             div.classList.add('shows')
