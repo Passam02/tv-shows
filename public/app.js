@@ -11,6 +11,7 @@ form.addEventListener('submit', async function (e) {
     const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput}`)
     makeImages(response.data)
     console.dir(response.data)
+    form[0].form.elements[0].value = ''
 })
 
 const makeImages = (tvShows) => {
@@ -32,3 +33,6 @@ const makeImages = (tvShows) => {
         }
     }
 }
+/*  TO DO:
+    GET ID FROM URL TO USE LATER IN API
+*/
