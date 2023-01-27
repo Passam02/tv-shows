@@ -24,3 +24,8 @@ input {
     padding-top: 5rem;
     padding-bottom: 1rem;
 }
+
+.shows{
+    display: inline-block;
+    text-align: center;
+}
