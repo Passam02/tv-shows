@@ -1,0 +1,26 @@
+input {
+    display: inline-block!important;
+    
+}
+
+.searchbtn {
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+}
+.searchbar {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.searchbar:focus {
+    border-color: rgb(222,226,230);
+    box-shadow: none;
+    
+}
+.rmpadding {
+    padding: 0;
+}
+
+.h1Padding {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
