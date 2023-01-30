@@ -1,5 +1,5 @@
 # tv-shows
-Simple web page made with Node.js that uses [TV-Maze Api](https://www.tvmaze.com/api) to search and display show's and information about them.
+Simple web page made with Node.js and bootstrap that uses [TV-Maze Api](https://www.tvmaze.com/api) to search and display show's and information about them.
 
 Npm modules i used:
 - ejs
