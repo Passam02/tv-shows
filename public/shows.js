@@ -1,9 +1,7 @@
-console.log(id)
-
 const addInfo = async () => {
 const response = await axios.get(`https://api.tvmaze.com/shows/${id}`)
-console.log(response.data)
 makeInformation(response.data)
+console.log(response.data)
 }
 
 addInfo()
@@ -21,7 +19,7 @@ const makeInformation = (info) => {
     img.src = info.image.original
     imgBox.append(img)
     const genres = document.createElement('h5')
-    genres.innerText = info.genres
+    genres.innerText = `Genres : ${info.genres}`
     infoBox.append(genres)
     const premiere = document.createElement('h5')
     premiere.innerText = `Premiere : ${info.premiered}`
@@ -32,8 +30,4 @@ const makeInformation = (info) => {
     const studio = document.createElement('h5')
     studio.innerText = `Studio : ${info.webChannel.name}`
     infoBox.append(studio)
-    
-
-    
-
 }

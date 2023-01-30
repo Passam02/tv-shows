@@ -1,8 +1,6 @@
 const form = document.querySelector('#searchForm')
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    //for (var i = document.images.length; i-->0;)
-    //document.images[i].parentNode.removeChild(document.images[i]);
     const divs = document.querySelectorAll('.shows');
     divs.forEach(box => {
     box.remove();
@@ -33,6 +31,3 @@ const makeImages = (tvShows) => {
         }
     }
 }
-/*  TO DO:
-    GET ID FROM URL TO USE LATER IN API
-*/
