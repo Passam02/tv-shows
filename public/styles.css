@@ -15,8 +15,7 @@ html {
 }
 .searchbar:focus {
     border-color: rgb(222,226,230);
-    box-shadow: none;
-    
+    box-shadow: none; 
 }
 .rmpadding {
     padding: 0;
