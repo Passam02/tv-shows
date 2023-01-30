@@ -31,3 +31,16 @@ const makeImages = (tvShows) => {
         }
     }
 }
+const url = document.URL
+const urlobj = new URL(url)
+
+const querysearch = async function () {
+    const word = (urlobj.search).slice(7)
+    const resp = await axios.get(`https://api.tvmaze.com/search/shows?q=${word}`)
+    makeImages(resp.data)
+}
+
+if (urlobj.search) {  
+    querysearch()
+    form[0].form.elements[0].value = (urlobj.search).slice(7)
+}
