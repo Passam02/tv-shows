@@ -6,14 +6,12 @@ form.addEventListener('submit', async function (e) {
     box.remove();
 });
     const searchInput = form[0].form.elements[0].value
-    const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput}`)
-    makeImages(response.data)
-    console.dir(response.data)
-
+    makeImages(searchInput)
 })
 
-const makeImages = (tvShows) => {
-    for (let show of tvShows) {
+const makeImages = async function(searchInput) {
+    const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput}`)
+    for (let show of response.data) {
         if (show.show.image) {
             const div = document.createElement('DIV')
             const img = document.createElement('IMG')
@@ -30,17 +28,4 @@ const makeImages = (tvShows) => {
             div.classList.add('shows')
         }
     }
-}
-const url = document.URL
-const urlobj = new URL(url)
-
-const querysearch = async function () {
-    const word = (urlobj.search).slice(7)
-    const resp = await axios.get(`https://api.tvmaze.com/search/shows?q=${word}`)
-    makeImages(resp.data)
-}
-
-if (urlobj.search) {  
-    querysearch()
-    form[0].form.elements[0].value = (urlobj.search).slice(7)
 }

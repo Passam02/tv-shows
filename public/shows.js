@@ -1,7 +1,6 @@
 const addInfo = async () => {
 const response = await axios.get(`https://api.tvmaze.com/shows/${id}`)
 makeInformation(response.data)
-console.log(response.data)
 }
 
 addInfo()
